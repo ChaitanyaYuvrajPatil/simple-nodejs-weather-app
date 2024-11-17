@@ -1,6 +1,8 @@
 # Install dependencies
 echo "Installing dependencies..."
 npm install
+echo "Installing ejs ..."
+npm i ejs
 # Stop existing PM2 process if running
 echo "Stopping existing PM2 process..."
 pm2 stop weatherapp
@@ -10,4 +12,3 @@ pm2 start ecosystem.config.js
 pm2 save
 # Setup PM2 to start on system boot
 pm2 startup
-
